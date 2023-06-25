@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.5/dist/full.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Youtube Clone</title>
+</head>
+<body class="pt-20">
+    <!--Background-->
+    <div class="bg-white  ">
+        <div class="flex flex-col px-3 bg-white font-[Roboto] font-bold text-sm tracking-wide">
+            <!--Nav bar-->
+            <div class=" nav flex fixed pb-2 top-0 z-50  w-full">
+              
+
+            <div class="flex space-x-4 md:w-2/3 items-center">
+                <div class="menu md:block cursor-pointer  hover:bg-[#C9CFD2] hover:rounded-[50%]" onclick="showSideBar()" >
+                 <i class="fa-solid fa-bars text-sm"></i>   
+                </div>
+                
+                <div class="group relative cursor-pointer logo md:block">
+                    <img src="images/youtubelogo.png" class="h-10 w-24 md:h-12  md:w-20" alt="">
+                    <div class="absolute hidden group-hover:block z-[9999px] -bottom-2 -right-16 border borde-black ">
+                      <div class="text-xs font-light px-2" >YouTube Home</div>
+                    </div>   
+                </div>
+                
+            </div>
+
+            
+                <div class="flex w-1/2 md:w-5/6 justify-end md:justify-end items-center space-x-2 md:space-x-4">
+                  
+                  <div class=" relative  md:w-full">
+                    <div class="flex flex-col group relative">
+                      
+                      <input type="text" placeholder="Search" class="hidden  border  border-bg-[#F0F0F0] border-[2px] w-full rounded-2xl focus:outline-none  p-2 md:px-4  md:inline-block searchinput" onclick="showHistory()" >
+                      
+                    
+                    <!--Search History-->
+                    <div class=" history hidden absolute group-active:block flex flex-col top-10 bg-white rounded-md w-full z-50 shadow-md border py-4 space-y-3">
+                          <div class="flex justify-between items-center hover:bg-[#D1D1D1] pointer px-4 py-1">
+                              <div class="flex items-center">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <div class="text-sm ml-4">
+                                    happier
+                                </div>
+                              </div>
+                              <div class="text-xs text-blue-900 hover:underline">
+                               <a href="">Remove</a>
+                              </div>
+                          </div>
+                          <div class="flex justify-between items-center px-4 py-1 hover:bg-[#D1D1D1] pointer">
+                            <div class="flex items-center">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
+                              <div class="text-sm ml-4">
+                                 memories
+                              </div>
+                            </div>
+                            <div class="text-xs text-blue-900 hover:underline">
+                             <a href="">Remove</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center px-4 py-1 hover:bg-[#D1D1D1] pointer">
+                          <div class="flex items-center">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <div class="text-sm ml-4">
+                                all for nothing lauv
+                            </div>
+                          </div>
+                          <div class="text-xs text-blue-900 hover:underline">
+                           <a href="">Remove</a>
+                          </div>
+                      </div>
+                      <div class="flex justify-between items-center px-4 py-2 hover:bg-[#D1D1D1] pointer">
+                        <div class="flex items-center">
+                          <i class="fa-solid fa-clock-rotate-left"></i>
+                          <div class="text-sm ml-4">
+                              careless whisper
+                          </div>
+                        </div>
+                        <div class="text-xs text-blue-900 hover:underline">
+                         <a href="">Remove</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center px-4 py-1 hover:bg-[#D1D1D1] pointer">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <div class="text-sm ml-4">
+                            Bye jaden smith
+                        </div>
+                      </div>
+                      <div class="text-xs text-blue-900 hover:underline">
+                       <a href="">Remove</a>
+                      </div>
+                  </div>
+                  <div class="flex justify-between items-center px-4 py-1 hover:bg-[#D1D1D1] pointer">
+                    <div class="flex items-center">
+                      <i class="fa-solid fa-clock-rotate-left"></i>
+                      <div class="text-sm ml-4">
+                          slow down
+                      </div>
+                    </div>
+                    <div class="text-xs text-blue-900 hover:underline">
+                     <a href="">Remove</a>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center px-4 py-1 hover:bg-[#D1D1D1] pointer">
+                  <div class="flex items-center">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <div class="text-sm ml-4">
+                        edu
+                    </div>
+                  </div>
+                  <div class="text-xs text-blue-900 hover:underline">
+                   <a href="">Remove</a>
+                  </div>
+              </div> 
+              <div class="flex justify-between items-center px-4 py-1 hover:bg-[#D1D1D1] pointer">
+                <div class="flex items-center">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  <div class="text-sm ml-4">
+                      all fall down
+                  </div>
+                </div>
+                <div class="text-xs text-blue-900 hover:underline">
+                 <a href="">Remove</a>
+                </div>
+              </div>   
+                  </div>
+                    <!--End Search History-->
+                  </div>
+
+                    <div class=" z-20 py-1 px-5     rounded-r-2xl   inline-block cursor-pointer group md:border-x-2xl md:border md:bottom-0 md:py-2  md:absolute md:right-0">
+                      <i class="fa-solid fa-magnifying-glass " ></i>
+                      <div class="absolute text-xs font-light p-1 text-white hidden group-hover:block bg-black bg-opacity-70 p-1 rounded-md -bottom-10 -right-5" >Search </div>
+
+                    </div >
+                    
+            
+                </div>
+                <div class="py-1 px-2 md:p-2 md:px-3 relative cursor-pointer group hover:bg-[#C9CFD2] hover:rounded-[50%] md:block" >
+                  <i class="fa-solid fa-microphone text-sm"></i>
+                  <div class="absolute hidden group-hover:block z-[9999px] -bottom-12 -right-20 rounded-md bg-black bg-opacity-70 ">
+                    <div class="text-xs font-light p-1 text-white" >Search with your voice</div>
+                  </div> 
+                </div> 
+
+                </div>
+
+                <div class="flex ml-2 md:justify-center items-center w-1/2 space-x-2 md:space-x-2 md:w-1/2">
+                  
+                
+                  <div class="md:p-2 md:px-3 relative cursor-pointer group hover:bg-[#C9CFD2] hover:rounded-[50%] py-1 px-2 md:block" id="video">
+                    <i class="fa-solid fa-video text-sm"></i>
+                    <div class="absolute hidden group-hover:block z-[9999px] -bottom-10 -right-12 rounded-md bg-black bg-opacity-70 ">
+                      <div class="text-xs font-light p-1 text-white" >Create</div>
+                    </div> 
+                  </div>
+                  <div class="md:p-2 md:px-3 relative cursor-pointer group hover:bg-[#C9CFD2] hover:rounded-[50%] py-1 px-2 md:block" >
+                    <i class="fa-regular fa-bell text-sm "></i>
+                    <div class="absolute hidden group-hover:block z-[9999px] -bottom-10 -right-12 rounded-md bg-black bg-opacity-70 ">
+                      <div class="text-xs font-light p-1 text-white" >Notifications</div>
+                    </div> 
+                  </div> 
+                  <div class="md:p-2 md:block" >
+                    <img src="images/songs/es.jpg" class="rounded-2xl w-6 h-6 bg-cover" alt="">
+                  </div> 
+                </div>
+              
+            
+           </div>
+            <!--End Nav Bar-->
+          <!--Side Bar--> 
+        <div class="flex relative">
+            <div class="sidebar md:mt-2 flex flex-col w-[270px] fixed bg-white top-0 md:top-14 space-y-2 z-50 hidden md:block  h-screen md:h-full overflow-y-auto duration-500">
+              <!--logo-->
+             
+              <div class="flex space-x-4 md:w-2/3 items-center md:hidden">
+                <div class="p-2 cursor-pointer  hover:bg-[#C9CFD2] hover:rounded-[50%]"onclick="showSideBar()">
+                 <i class="fa-solid fa-bars text-sm"></i>   
+                </div>
+                
+                <div>
+                    <img src="images/youtubelogo.png" class="h-10 w-20 md:h-12  md:w-20" alt="">   
+                </div>
+                
+            </div>
+              
+              <!--end logo-->
+                <!--Home-->
+                <div class="flex space-x-4 bg-[#E8E8E8] p-2 rounded-lg cursor-pointer">
+                    <div>
+                      <i class="fa-solid fa-house items-start"></i>  
+                    </div>
+                    
+                    <div class="">
+                        <span class="font-light">Home</span>
+                    </div>
+                </div>
+                <!--End Home-->
+
+                <!--Short-->
+                <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+                    <div>
+                      <i class="fa-solid fa-film"></i> 
+                    </div>
+                    
+                    <div class="">
+                        <span class="font-light">Shorts</span>
+                    </div>
+                </div>
+                <!--End Short-->
+
+                <!--Subscription-->
+                <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+                    <div>
+                      <i class="fa-brands fa-twitch"></i>  
+                    </div>
+                    
+                    <div class="">
+                        <span class="text-light font-light">Subscription</span>
+                    </div>
+                </div>
+
+                <!--End Subscription-->
+
+                <!--Border-->
+                <div class="border border-[#939496] border-opacity-20"></div>
+           <!--End Border-->
+                
+                <!--Library-->
+                
+                <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+                  <div>
+                    <i class="fa-solid fa-book-atlas"></i>  
+                  </div>
+                  
+                  <div class="">
+                      <span class="font-light">Library</span>
+                  </div>
+              </div>
+           
+              <!--End Library-->
+
+              <!--History-->
+              
+              <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+                  <div>
+                    <i class="fa-solid fa-clock-rotate-left"></i>  
+                  </div>
+                  
+                  <div class="">
+                      <span class="font-light" >History</span>
+                  </div>
+              </div>
+          
+
+              <!--End History-->
+
+              <!--Watch Later-->
+            
+              <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+                  <div>
+                    <i class="fa-regular fa-clock"></i> 
+                  </div>
+                  
+                  <div class="">
+                      <span class="text-light font-light">Watch Later</span>
+                  </div>
+              </div>
+          
+
+              <!--End Watch Later-->
+
+              <!--Like-->
+           
+              <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+                
+                <div>
+                  <i class="fa-regular fa-thumbs-up"></i>  
+                </div>
+                
+                <div class="">
+                    <span class="text-light font-light">Liked Videos</span>
+                </div>
+              
+            </div>
+            
+            <!--End Like-->
+
+              <!--Border-->
+              <div class="border border-[#939496] border-opacity-20"></div>
+         <!--End Border-->
+            
+          <!--Explore-->
+          <h1>Explore</h1>
+          <!--Trending-->
+          <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+            
+            <div>
+              <i class="fa-brands fa-free-code-camp"></i>  
+            </div>
+            
+            <div class="">
+                <span class="font-light">Trending</span>
+            </div>
+        </div>
+        <!--End Trending-->
+
+        <!--Music-->
+        <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+            <div>
+              <i class="fa-solid fa-music"></i>  
+            </div>
+            
+            <div class="">
+                <span class="font-light">Music</span>
+            </div>
+        </div>
+        <!--End Music-->
+
+        <!--Live-->
+        <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+            <div>
+              <i class="fa-solid fa-tower-broadcast"></i> 
+            </div>
+            
+            <div class="">
+                <span class="text-light font-light">Live</span>
+            </div>
+        </div>
+
+        <!--End Live-->
+
+        <!--Gaming-->
+        <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+          <div>
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          
+          <div class="">
+              <span class="text-light font-light">Gaming</span>
+          </div>
+      </div>
+
+      <!--End Game-->
+
+      <!-- new-->
+      <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+        <div>
+          <i class="fa-solid fa-newspaper"></i>
+        </div>
+        
+        <div class="">
+            <span class="text-light font-light">News</span>
+        </div>
+    </div>
+
+    <!--End new-->
+
+    <!--Sport-->
+    <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+      <div>
+        <i class="fa-solid fa-trophy"></i>
+      </div>
+      
+      <div class="">
+          <span class="text-light font-light">Sport</span>
+      </div>
+  </div>
+
+  <!--EnSport-->
+
+  <!--Learning-->
+  <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+    <div>
+      <i class="fa-regular fa-lightbulb"></i>
+    </div>
+    
+    <div class="">
+        <span class="text-light font-light ">Learning</span>
+    </div>
+</div>
+
+<!--End learning-->
+
+<!--Fashion and beauty-->
+<div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+  <div>
+    <i class="fa-solid fa-shirt"></i>
+  </div>
+  
+  <div class="">
+      <span class="text-light font-light text-sm">Fashion & Beauty</span>
+  </div>
+</div>
+
+<!--End Fashion and beauty-->
+      
+<!--Border-->
+<div class="border border-[#939496] border-opacity-20"></div>
+   <!--End Border-->
+
+  <h1>More From Youtube</h1>
+  <!--youtube kid-->
+  <div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+    <div>
+      <i class="fa-brands fa-square-youtube text-[#F70000]"></i>  
+    </div>
+    
+    <div class="">
+        <span class="font-light">Youtube Kid</span>
+    </div>
+</div>
+<!--End youtube kid-->
+
+<!--Border-->
+<div class="border border-[#939496] border-opacity-20"></div>
+<!--End Border-->
+
+<!--Setting-->
+
+<div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+  <div>
+    <i class="fa-solid fa-gear"></i>  
+  </div>
+  
+  <div class="">
+      <span class="font-light">Setting</span>
+  </div>
+</div>
+
+<!--End Setting-->
+
+<!-- ReportHistory-->
+
+<div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+  <div>
+    <i class="fa-regular fa-flag"></i> 
+  </div>
+  
+  <div class="">
+      <span class="font-light">Report History</span>
+  </div>
+</div>
+
+
+<!--End Report History-->
+
+<!--Help-->
+
+<div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer">
+  <div>
+    <i class="fa-regular fa-circle-question"></i>
+  </div>
+  
+  <div class="">
+      <span class="text-light font-light">Help</span>
+  </div>
+</div>
+
+
+<!--End Help-->
+
+<!--Report Feedback-->
+
+<div class="flex space-x-4 p-2 rounded-lg hover:bg-[#E8E8E8] cursor-pointer ">
+
+<div>
+  <i class="fa-regular fa-comment-dots"></i> 
+</div>
+
+<div class="">
+    <span class="text-light font-light">Report Feedback</span>
+</div>
+
+</div>
+
+<!--End Report Feedback-->
+
+<!--Border-->
+<div class="border border-[#939496] border-opacity-20"></div>
+<!--End Border-->
+
+<!--About Term Copy-->
+<div class="flex flex-col space-y-2 cursor-pointer">
+
+ <div class="flex flex-col p-2">
+   <div class="flex space-x-2">
+      <p class="text-xs text-[#939496]">About</p>
+      <p class="text-xs text-[#939496]">Press</p>
+      <p class="text-xs text-[#939496]">Copyright</p>
+   </div>
+
+   <div class="flex space-x-2">
+    <p class="text-xs text-[#939496]">Contact us</p>
+    <p class="text-xs text-[#939496]">Creator</p>
+ </div>
+
+ <div class="flex space-x-2">
+  <p class="text-xs text-[#939496]">Advertise</p>
+  <p class="text-xs text-[#939496]">Developer</p>
+</div>
+
+ </div>
+
+ <div class="flex flex-col px-2">
+  <div class="flex space-x-2">
+     <p class="text-xs text-[#939496]">Terms</p>
+     <p class="text-xs text-[#939496]">Policy</p>
+     <p class="text-xs text-[#939496]">Privacy & Safety</p>
+  </div>
+
+  <div >
+   <p class="text-xs text-[#939496] ">How YouTube works</p>
+</div>
+
+<div >
+ <p class="text-xs text-[#939496] ">Test new features</p>
+</div>
+
+</div>
+<div class="px-2">
+  <p class="text-xs text-[#939496] ">	&copy; 2023 Google LLC</p>
+</div>
+
+
+</div>
+<!--About Term Copy-->
+
+ </div>
+ <!--End Side Bar-->
+         
+<div class="flex flex-col overflow-x-hidden">
+   
+  <div class=" relative md:pl-[290px] ">
+   
+    <div class="content z-20 top-10 mt-2 py-2 flex fixed font-light md:w-screen overflow-x-hidden h-12 overflow-y-hidden w-full md:mt-4" id="content"> 
+      
+      <div class="flex fixed w-full  z-50">
+         <div class="p-4 px-6  bg-white flex justify-center items-center cursor-pointer">
+          <i class="fa-solid fa-chevron-left text-black rounded-[50%] bg-[#D4D4D4] p-2 px-3 fixed" onclick="onscrollLeft()"></i>
+        </div>
+        <div class="pb-1 px-3  bg-white flex justify-center items-center right-0 fixed cursor-pointer">
+            <i class="fa-solid fa-chevron-right text-black   rounded-[50%] bg-[#D4D4D4] p-2 px-3 " onclick="onscrollRight() "></i>
+        </div>
+          
+        </div>
+        
+        
+      
+      
+     <button class="bg-black text-white ml-14   px-6  rounded-lg">
+     <span class="text-xs">All</span>
+      </button>
+      <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+          <span class="text-xs">Mixes</span>
+      </button>
+      <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+          <span class="text-xs">Music</span>
+      </button>
+      <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6 rounded-lg">
+          <span class="text-xs">Gaming</span>
+      </button>
+      <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+          <span class="text-xs">Lauv</span>
+      </button>
+      <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+       <span class="text-xs">Pop</span>
+        </button>
+        <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+            <span class="text-xs">Live</span>
+        </button>
+        <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+            <span class="text-xs">Playlist</span>
+        </button>
+        <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+            <span class="text-xs">CSS</span>
+        </button>
+        <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+            <span class="text-xs">Lofi</span>
+        </button>
+        <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+         <span class="text-xs">Python</span>
+          </button>
+          <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+              <span class="text-xs">Watched</span>
+          </button>
+          <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+              <span class="text-xs">Facebook</span>
+          </button>
+          <button class="bg-[#E5E5E5] ml-2 hover:bg-[#C6C6C6]  px-6  rounded-lg">
+              <span class="text-xs">Song</span>
+          </button>
+         
+         </button>
+     </div>
+        <!--End Button-->
+        
+        
+        
+        
+         </div>
+
+   <!--Content-->
+          <div class='md:pl-[250px] mt-6'>
+          <div class="grid grid-cols-1 ">
+             
+            <!--Button-->
+            
+            
+
+            <!--Border-->
+            <!--First Content-->
+           <div class="grid gap-4 gap-y-12 grid-cols-1  md:grid-cols-3 mx-10 mt-6">
+            <div class="group cursor-pointer ">
+                <div class="relative">
+                     <img src="images/songs/jb.jpg" class="w-full rounded-xl h-45 " alt="">
+                   <div class="absolute bg-black bg-opacity-0 group-hover:bg-opacity-60 top-0 rounded-xl h-full w-full">
+                     <div class="flex justify-center items-center h-full space-x-2 text-opacity-0 text-white group-hover:text-opacity-80 transition-all duration-900">
+                        <i class="fa-solid fa-play  text-xs"></i>
+                        <span class="uppercase text-xs">Play  All</span>
+                     </div>
+                   </div> 
+                   <div class="absolute bg-black bg-opacity-40 rounded-b-xl text-white flex justify-center items-center w-full h-8 bottom-0">
+                    <i class="fa-solid fa-play text-xs"></i>
+                   </div>
+                </div>
+                
+                <div class="flex justify-between mt-4 ">
+                    <div class="flex flex-col">
+                      <p class="text-sm">Mix - Justin Bieber - Sorry (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light">
+                        Jb, Jaden Smith, Sean Kingston and more
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+
+            </div>
+
+            <div class="group cursor-pointer ">
+                <div class="relative">
+                  <img src="images/songs/anna.jpg" class="w-full rounded-xl h-45 " alt="">
+                   <div class="absolute bg-black bg-opacity-0 group-hover:bg-opacity-60 top-0 rounded-xl h-full w-full">
+                     <div class="flex justify-center items-center h-full space-x-2 text-opacity-0 text-white group-hover:text-opacity-80 transition-all duration-900">
+                        <i class="fa-solid fa-play  text-xs"></i>
+                        <span class="uppercase text-xs">Play  All</span>
+                     </div>
+                   </div> 
+                   <div class="absolute bg-black bg-opacity-40 rounded-b-xl text-white flex justify-center items-center w-full h-8 bottom-0">
+                    <i class="fa-solid fa-play text-xs"></i>
+                   </div>
+                </div>
+                
+                <div class="flex justify-between mt-4 ">
+                    <div class="flex flex-col">
+                      <p class="text-sm">Mix - Anne Marie - Sorry (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light">
+                        Anne Marie, Chain Smoker and more
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+
+            </div>
+
+            <div class="group cursor-pointer hidden md:block">
+                <div class="relative">
+                  <img src="images/songs/conor.jpg" class="w-full rounded-xl h-45 " alt="">
+                   <div class="absolute bg-black bg-opacity-0 group-hover:bg-opacity-60 top-0 rounded-xl h-full w-full">
+                     <div class="flex justify-center items-center h-full space-x-2 text-opacity-0 text-white group-hover:text-opacity-80 transition-all duration-900">
+                        <i class="fa-solid fa-play  text-xs"></i>
+                        <span class="uppercase text-xs">Play  All</span>
+                     </div>
+                   </div> 
+                   <div class="absolute bg-black bg-opacity-40 rounded-b-xl text-white flex justify-center items-center w-full h-8 bottom-0">
+                    <i class="fa-solid fa-play text-xs"></i>
+                   </div>
+                </div>
+                
+                <div class="flex justify-between mt-4 ">
+                    <div class="flex flex-col">
+                      <p class="text-sm">Mix - Conor Maynard - Covers (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light">
+                        Billie Eilish, Ashley and more
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+
+            </div>
+
+            <div class="group cursor-pointer hidden md:block relative">
+                <img src="images/songs/edsheeran.jpg " class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >1:50:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/es.jpg" class="w-9 h-7 rounded-2xl" alt="">
+                    <div class="flex flex-col mr-6">
+                      
+                      
+                        <p class="text-sm ml-2">Ed Sheeran - Perfect (Lyrics) HQ Audio
+                     </p>
+                     
+                       
+                      <div class="text-xs text-[#939496] ml-2 font-light">
+                        Ed Sheeran, Justin Bieber and more
+                      </div> 
+                      <div class="ml-2 text-xs text-[#939496] font-light ">
+                       17M views . 4years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+
+            <div class="group cursor-pointer hidden md:block relative">
+                <img src="images/songs/marron.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >3:50:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/m5.jpg" class="w-8 h-8 rounded-2xl" alt="">
+                    <div class="flex flex-col">
+                       
+                      <p class="text-sm">Marron 5 - Sugar,  Animal (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light">
+                        Marron 5, Hit Songs and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light ">
+                       10M views . 8years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+
+            <div class="group cursor-pointer hidden md:block relative">
+                <img src="images/songs/ts.jpg" class=" w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >4:10:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/ts.webp" class="w-8 h-8 rounded-2xl" alt="">
+                    <div class="flex flex-col ">
+                       
+                      <p class="text-sm">Taylor Swift - Enchanted (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light">
+                        Taylor Swift, Camilla Cabello and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light ">
+                       100M views . 5years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+         </div>
+        <!--End First Content-->
+          </div>
+
+          <!--Border-->
+          <div class="grid  border border-[#C6C6C6]  mx-10 mt-6"></div>
+          <!--End Border-->
+           
+          <!--Short-->
+          <div class="flex flex-col space-y-4 mx-10 mt-6">
+            <div class="flex space-x-2">
+                <img src="images/shorts.jpg" class="w-10 h-7" alt="">
+                <div class="flex justify-between items-center w-full">
+                  <h1 >Shorts</h1>
+                  <i class="fa-solid fa-xmark cursor-pointer"></i>
+                </div>
+                
+               
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                 <div class="group h-100 cursor-pointer">
+                    <img src="images/songs/reel.webp" class="rounded-lg h-60 w-full" alt="">
+                    <div class="flex justify-between mt-2">
+                        <div class="flex flex-col">
+                            <p class="font-medium text-sm">Their harmonies at the end 😍 #shorts | Stephen Sanchez - Until I Found You</p>
+                            <div class="text-xs text-[#939496] font-light ">
+                                100M views
+                               </div>
+
+                        </div>
+                     
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>   
+                    </div>
+                 </div>
+                 <div class="group h-100 cursor-pointer">
+                    <img src="images/songs/fiona.jpg" class="rounded-lg h-60 w-full" alt="">
+                    <div class="flex justify-between mt-2">
+                        <div class="flex flex-col">
+                            <p class="font-medium text-sm">Fiona Sze dance</p>
+                            <div class="text-xs text-[#939496] font-light ">
+                                100M views
+                               </div>
+
+                        </div>
+                     
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>   
+                    </div>
+                 </div>
+
+                 <div class="group h-100 cursor-pointer">
+                    <img src="images/songs/cutegirl.webp" class="rounded-lg h-60 w-full" alt="">
+                    <div class="flex justify-between mt-2">
+                        <div class="flex flex-col">
+                            <p class="font-medium text-sm">This is from tik tok</p>
+                            <div class="text-xs text-[#939496] font-light ">
+                                100M views
+                               </div>
+
+                        </div>
+                     
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>   
+                    </div>
+                 </div>
+
+                 <div class="group h-100 cursor-pointer">
+                    <img src="images/songs/bella.jpg" class="rounded-lg h-60 w-full" alt="">
+                    <div class="flex justify-between mt-2">
+                        <div class="flex flex-col">
+                            <p class="font-medium text-sm">Most Viewed Video From Tik Tok</p>
+                            <div class="text-xs text-[#939496] font-light ">
+                                300M views
+                               </div>
+
+                        </div>
+                     
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>   
+                    </div>
+                 </div>
+
+                 <div class="group h-100 cursor-pointer">
+                    <img src="images/songs/dance.jpg" class="rounded-lg h-60 w-full" alt="">
+                    <div class="flex justify-between mt-2">
+                        <div class="flex flex-col">
+                            <p class="font-medium text-sm">Dance</p>
+                            <div class="text-xs text-[#939496] font-light ">
+                                100M views
+                               </div>
+
+                        </div>
+                     
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>   
+                    </div>
+                 </div>
+
+                 <div class="group h-100 cursor-pointer ">
+                    <img src="images/songs/lauv.jpg" class="rounded-lg h-60 w-full" alt="">
+                    <div class="flex justify-between mt-2">
+                        <div class="flex flex-col">
+                            <p class="font-medium text-sm">Lauv Live</p>
+                            <div class="text-xs text-[#939496] font-light ">
+                                1M views
+                               </div>
+
+                        </div>
+                     
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>   
+                    </div>
+                 </div>
+               </div> 
+        </div>
+          <!--End Short-->
+          <!--Border-->
+          <div class="border border-[#C6C6C6]  mx-10 mt-6"></div>
+          <!--End Border-->
+
+          <!--Second Content-->
+          <div class="grid gap-4 gap-y-12 grid-cols-1 mx-10 mt-6 md:grid-cols-3 ">
+            <div class="group cursor-pointer ">
+                <div class="relative">
+                  <img src="images/songs/sunroof.jpg" class="w-full rounded-xl h-45 " alt="">
+                   <div class="absolute bg-black bg-opacity-0 group-hover:bg-opacity-60 top-0 rounded-xl h-full w-full">
+                     <div class="flex justify-center items-center h-full space-x-2 text-opacity-0 text-white group-hover:text-opacity-80 transition-all duration-900">
+                        <i class="fa-solid fa-play  text-xs"></i>
+                        <span class="uppercase text-xs">Play  All</span>
+                     </div>
+                   </div> 
+                   <div class="absolute bg-black bg-opacity-40 rounded-b-xl text-white flex justify-center items-center w-full h-8 bottom-0">
+                    <i class="fa-solid fa-play text-xs ml-4"></i>
+                   </div>
+                </div>
+                
+                <div class="flex justify-between mt-4 ">
+                    <div class="flex flex-col">
+                      <p class="text-sm">Mix - Nicky Youre - Sunroof (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light">
+                        Nicky Youre, Sam Smith and more
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+
+            </div>
+            
+            <div class="group cursor-pointer relative">
+                <img src="images/songs/rhihanna.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >1:50:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/r.webp" class="w-7 h-9 rounded-2xl" alt="">
+                    <div class="flex flex-col">
+                       
+                      <p class="text-sm ml-2">Rhihanna - Diamonds (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light ml-2">
+                        Rhihanna, Hit Songs and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light ml-2">
+                       10M views . 8years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+            
+            
+            <div class="group cursor-pointer relative">
+                <img src="images/songs/orodrigo.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >3:50:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/or.jpg" class="w-7 h-8 rounded-2xl" alt="">
+                    <div class="flex flex-col">
+                       
+                      <p class="text-sm ml-2">Olivia Rodrigo - Happier (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light ml-2">
+                        Olivia Rodrigo, Hit Songs and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light ml-2 ">
+                       19M views . 2years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+            <div class="group cursor-pointer relative">
+              <img src="images/songs/edsheeran.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >8:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/es.jpg" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col mr-6">
+                     
+                    <p class="text-sm ml-2">Ed Sheeran - Perfect (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Ed Sheeran, Justin Bieber and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light ml-2 ">
+                     17M views . 4years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+
+          <div class="group cursor-pointer relative">
+              <img src="images/songs/marron.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >1:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/m5.jpg" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col">
+                     
+                    <p class="text-sm ml-2">Marron 5 - Sugar,  Animal (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Marron 5, Hit Songs and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light  ml-2">
+                     10M views . 8years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+
+          <div class="group cursor-pointer relative ">
+              <img src="images/songs/ts.jpg" class=" w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/ts.webp" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col ">
+                     
+                    <p class="text-sm ml-2">Taylor Swift - Enchanted (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Taylor Swift, Camilla Cabello and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light  ml-2">
+                     100M views . 5years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+
+            <div class="group cursor-pointer relative">
+                <img src="images/songs/shawn.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >2:50:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/sm.webp" class="w-8 h-8 rounded-2xl" alt="">
+                    <div class="flex flex-col">
+                       
+                      <p class="text-sm ml-2">Shawn Mendes - Senorita (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light ml-2">
+                        Shawn Mendes, Hit Songs and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light ml-2 ">
+                       988M views . 3years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+
+            <div class="group cursor-pointer relative">
+                <img src="images/songs/conor.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >1:50:45</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/cm.webp" class="w-8 h-8 rounded-2xl" alt="">
+                    <div class="flex flex-col">
+                       
+                      <p class="text-sm ml-2">Cornar Maynard - cover songs Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light ml-2">
+                        Cornar Maynard , Hit Songs and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light  ml-2">
+                       80M views . 3years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+
+            <div class="group cursor-pointer relative">
+                <img src="images/songs/wdwsong.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+                <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                  <p >8:50:15</p>
+                </div>
+                <div class="flex justify-between mt-4 ">
+                    <img src="images/songs/wdw.jpg" class="w-8 h-8 rounded-2xl" alt="">
+                    <div class="flex flex-col">
+                       
+                      <p class="text-sm ml-2">Why don't we - 8Letter (Lyrics) HQ Audio
+                     </p> 
+                      <div class="text-xs text-[#939496] font-light ml-2">
+                        Why don't We , Hit Songs and more
+                      </div> 
+                      <div class="text-xs text-[#939496] font-light ml-2 ">
+                       900M views . 3years ago
+                      </div> 
+                      
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+                </div>
+            </div>
+
+            <div class="group cursor-pointer ">
+              <div class="relative">
+                <img src="images/songs/sunroof.jpg" class="w-full rounded-xl h-45 " alt="">
+                 <div class="absolute bg-black bg-opacity-0 group-hover:bg-opacity-60 top-0 rounded-xl h-full w-full">
+                   <div class="flex justify-center items-center h-full space-x-2 text-opacity-0 text-white group-hover:text-opacity-80 transition-all duration-900">
+                      <i class="fa-solid fa-play  text-xs"></i>
+                      <span class="uppercase text-xs">Play  All</span>
+                   </div>
+                 </div> 
+                 <div class="absolute bg-black bg-opacity-40 rounded-b-xl text-white flex justify-center items-center w-full h-8 bottom-0">
+                  <i class="fa-solid fa-play text-xs ml-4"></i>
+                 </div>
+              </div>
+              
+              <div class="flex justify-between mt-4 ">
+                  <div class="flex flex-col">
+                    <p class="text-sm">Mix - Nicky Youre - Sunroof (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light">
+                      Nicky Youre, Sam Smith and more
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+
+          </div>
+          
+          <div class="group cursor-pointer relative">
+              <img src="images/songs/rhihanna.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >1:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/r.webp" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col">
+                     
+                    <p class="text-sm ml-2">Rhihanna - Diamonds (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Rhihanna, Hit Songs and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light  ml-2">
+                     10M views . 8years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+
+          <div class="group cursor-pointer relative">
+              <img src="images/songs/orodrigo.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >3:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/or.jpg" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col">
+                     
+                    <p class="text-sm ml-2">Olivia Rodrigo - Happier (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Olivia Rodrigo, Hit Songs and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light  ml-2">
+                     19M views . 2years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+          <div class="group cursor-pointer relative">
+              <img src="images/songs/shawn.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >4:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/sm.webp" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col">
+                     
+                    <p class="text-sm ml-2">Shawn Mendes - Senorita (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Shawn Mendes, Hit Songs and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light  ml-2">
+                     988M views . 3years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+
+          <div class="group cursor-pointer relative">
+              <img src="images/songs/conor.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >5:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/cm.webp" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col">
+                     
+                    <p class="text-sm ml-2">Cornar Maynard - cover songs Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Cornar Maynard , Hit Songs and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light  ml-2">
+                     80M views . 3years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+
+          <div class="group cursor-pointer relative">
+              <img src="images/songs/wdwsong.jpg" class="w-full rounded-xl h-45 group-hover:-translate-y-0.5 group-hover:rounded-none group-hover:shadow-lg duration-200" alt="">
+              <div class="absolute bg-black bg-opacity-60 p-1 rounded-2xl text-xs text-white right-1 bottom-24 group-hover:hidden">
+                <p >8:50:45</p>
+              </div>
+              <div class="flex justify-between mt-4 ">
+                  <img src="images/songs/wdw.jpg" class="w-8 h-8 rounded-2xl" alt="">
+                  <div class="flex flex-col">
+                     
+                    <p class="text-sm ml-2">Why don't we - 8Letter (Lyrics) HQ Audio
+                   </p> 
+                    <div class="text-xs text-[#939496] font-light ml-2">
+                      Why don't We , Hit Songs and more
+                    </div> 
+                    <div class="text-xs text-[#939496] font-light ml-2 ">
+                     900M views . 3years ago
+                    </div> 
+                    
+                  </div>
+                  <i class="fa-solid fa-ellipsis-vertical text-white group-hover:text-black ml-4"></i>
+
+              </div>
+          </div>
+         </div>
+        <!--End Second Content-->
+        
+        <div class="w-full h-screen flex justify-center items-center">
+            <img src="images/loading.gif" class="h-20"  alt="">
+        </div>
+      </div>
+   
+        <!--End Content-->
+    </div>
+        </div>
+
+         
+         
+        </div>
+    </div>
+    
+    
+    <script src="js/script.js">
+
+    </script>
+</body>
+</html>
