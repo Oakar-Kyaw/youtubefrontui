@@ -5,6 +5,8 @@ const next=document.querySelector('.next');
 const searchinput=document.querySelector('.searchinput');
 const sidebar=document.querySelector('.sidebar');
 const history=document.querySelector('.history');
+const profile=document.querySelector('.profile');
+const profile_box=document.querySelector('.profile-box');
 
 window.onscroll=function(){
     nav.classList.add('bg-white')
@@ -12,19 +14,22 @@ window.onscroll=function(){
     button.classList.add('bg-white')
 }
 
+profile.onclick=function (){
+    profile_box.classList.toggle('hidden')
+}
 function showSideBar(){
     sidebar.classList.toggle('hidden')
 }
 function showHistory(){
     history.classList.remove('hidden')
 }
-searchinput.onchange=function (event){ 
+searchinput.onclick=function (event){ 
     
    // if(event.target.value==''){
     //    history.classList.remove('hidden')
   //  }
    // else {
-        history.classList.add('hidden')
+        history.classList.toggle('hidden')
    // }
 }
 
